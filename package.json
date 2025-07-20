@@ -8,7 +8,8 @@
     "dev": "NODE_ENV=development tsx watch --env-file .env src/main.ts",
     "build:prod": "tsc -p tsconfig.prod.json",
     "build:dev": "tsc -p tsconfig.dev.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
     "prepare": "husky"
   },
   "repository": {
@@ -33,6 +34,8 @@
     "husky": "^9.1.7",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "ultracite": "5.0.47"
+    "ultracite": "5.0.47",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }

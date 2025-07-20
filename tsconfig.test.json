@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build-test",
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": false,
+    "incremental": true,
+    "tsBuildInfoFile": "./build-test/.tsbuildinfo",
+    "types": ["vitest/globals", "node"],
+    "noEmitOnError": false
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "vitest.config.ts",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}
