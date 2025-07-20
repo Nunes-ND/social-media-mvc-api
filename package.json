@@ -4,6 +4,10 @@
   "description": "Node.js MVC API for social media client management - A practice project focused on clean architecture and CRUD operations",
   "main": "dist/index.js",
   "scripts": {
+    "start": "npm run build:prod && node dist/main.js",
+    "dev": "NODE_ENV=development tsx watch --env-file .env src/main.ts",
+    "build:prod": "tsc -p tsconfig.prod.json",
+    "build:dev": "tsc -p tsconfig.dev.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/Nunes-ND/social-media-mvc-api/issues"
   },
-  "homepage": "https://github.com/Nunes-ND/social-media-mvc-api#readme"
+  "homepage": "https://github.com/Nunes-ND/social-media-mvc-api#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
 }

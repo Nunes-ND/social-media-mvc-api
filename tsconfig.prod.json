@@ -1,0 +1,28 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"sourceMap": false,
+		"inlineSourceMap": false,
+		"declaration": false,
+		"declarationMap": false,
+		"removeComments": true,
+		"incremental": false,
+		"tsBuildInfoFile": null,
+		"noEmitOnError": true,
+		"stripInternal": true,
+		"noImplicitUseStrict": false
+	},
+	"include": ["src/**/*"],
+	"exclude": [
+		"node_modules",
+		"build",
+		"coverage",
+		"tests/**/*",
+		"vitest.config.ts",
+		"**/*.test.ts",
+		"**/*.spec.ts",
+		"**/*.dev.ts",
+		"**/*.development.ts"
+	]
+}
