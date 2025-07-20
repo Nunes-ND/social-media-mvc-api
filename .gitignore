@@ -1,0 +1,19 @@
+# Compiled output
+/node_modules
+/dist
+/build
+
+# Tests
+/coverage
+
+# Folders
+plan/
+
+# Files
+!.vscode/settings.json
+!.vscode/extensions.json
+.env
+.env.development
+.env.test
+.env.production
+.env.local
