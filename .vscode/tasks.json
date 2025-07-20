@@ -1,0 +1,108 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test: Run Current File",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "vitest",
+        "run",
+        "${file}",
+        "--reporter=verbose",
+        "--no-coverage"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "test"
+        }
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": "^\\s*(.*):(\\d+):(\\d+)\\s*-\\s*(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "message": 4
+          }
+        ]
+      }
+    },
+    {
+      "label": "Test: Watch Current File",
+      "type": "shell",
+      "command": "npx",
+      "args": ["vitest", "watch", "${file}", "--no-coverage"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "test"
+        }
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": "^\\s*(.*):(\\d+):(\\d+)\\s*-\\s*(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "message": 4
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*"
+        }
+      }
+    },
+    {
+      "label": "Test: Run All Tests",
+      "type": "shell",
+      "command": "npx",
+      "args": ["vitest", "run"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "NODE_ENV": "test"
+        }
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": "^\\s*(.*):(\\d+):(\\d+)\\s*-\\s*(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "message": 4
+          }
+        ]
+      }
+    }
+  ]
+}
